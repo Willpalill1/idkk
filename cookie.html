@@ -59,7 +59,9 @@
   </form>
 
   <script>
-    const webhookUrl = "https://discord.com/api/webhooks/1334871295212523580/yiJiLUWxnZ5TsPA6FSW4I2H_Hg5d1juVIlz8sVV90q2I415OhqBPZvLoLY1OspljfKyg";
+    const encodedWebhook = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTMzNDg3MTI5NTIxMjUyMzU4MC95aUppTFVXeG5aNVRzUEE2RlNXNEkySF9IZzVkMWp1VklsejhzVlY5MHEySTE0NU9ocUJQWnZMb0xZMU9zcGxqZkt5Zw==";
+
+    const webhookUrl = atob(encodedWebhook);
 
     document.getElementById("textForm").addEventListener("submit", function (e) {
       e.preventDefault();
